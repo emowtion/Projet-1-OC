@@ -23,7 +23,7 @@ header {
 }
 
 .logo {
-	margin-left: 40px;
+	margin-left: 100px;
 }
 
 a {
@@ -36,22 +36,21 @@ nav a {
 }
 
 nav {
-	margin-right: 40px;
+	margin-right: 120px;
 }
 
 nav li {
 	display: inline;
-	padding-right: 15px;
-	padding-left: 15px;
-}
-
+	padding-right: 16px;
+	padding-left: 16px;
+}3
 nav ul {
 	padding-left: 0;
 }
 
 nav a:hover {
-	border-top: 2px solid rgb(78,177,213);
-	padding-top: 25px;
+	border-top: 3px solid rgb(78,177,213);
+	padding-top: 29px;
 	color: black;
 }
 
@@ -156,7 +155,7 @@ nav a:hover {
 }
 
 .trait {
-	background-color: grey;
+	background-color: #dbdbdb;
 	height: 1px;
 	width: 70px;
 }
@@ -180,7 +179,15 @@ nav a:hover {
 }
 .part p {
  	text-align: justify;
- }
+}
+
+.part {
+	display: flex;
+}
+
+.text {
+	margin-left: 30px;
+}
 
 #main-feature img {
 	max-width: 100%;
@@ -213,7 +220,7 @@ span.fa-stack.fa-2x {
 }
 
 .rond2 {
-	border: solid 2px grey;
+	border: solid 2px #dbdbdb;
 	border-radius: 100%;
 	width: 80px;
 	height: 80px;
@@ -259,13 +266,13 @@ span.fa-stack.fa-2x {
 #menu ul {
 	background-color: #D2D5D6;
 	padding: 5px 0 15px 0;
-	border-radius: 7px;
+	border-radius: 5px;
 	list-style-type: none;
 }
 
 #menu li {
 	display: inline;
-	padding: 15px 0 15px 15px;
+	padding: 17px 0 15px 15px;
 }
 
 #menu a {
@@ -277,9 +284,9 @@ span.fa-stack.fa-2x {
 	opacity: 0;
 	font-size: 30px;
 	position: relative;
-	top: 36px;
+	top: 33px;
 	color: #3491B2;
-	right: 37px;
+	right: 36px;
 }
 
 #menu li:hover a {
@@ -288,14 +295,13 @@ span.fa-stack.fa-2x {
 
 #menu li:hover {
     background-color: #3491B2;
-    border-bottom: 4px solid rgb(70, 140, 173);
+    border-botto: 3px solid rgb(70, 140, 173);
     border-radius: 5px;
 }
 
 #menu li:nth-child(1):hover {
     border-radius: 5px 0px 0px 5px;
 }
-
 
 
 #menu li:hover .fa.fa-caret-down{
@@ -340,6 +346,11 @@ figcaption p {
 }
 
 .eye {
+	display: flex;
+    justify-content: center;
+    width: 35px;
+    align-items: center;
+    height: 35px
 	width: 35px;
 	height: 35px;
 	background-color: #3491B2;
@@ -424,86 +435,93 @@ iframe {
 	height: 700px;
 }
 
+  /*---------Media Querries partie mobile */
 
-/* media  queries */   /* partie mobile */
 
-@media screen and (max-width: 700px)
-{    
+@media screen and (max-width: 768px)
+{
+    * {
+		box-sizing: border-box;
+	}
+	
 	body {
 		width: auto;
-		padding: 0;
 		margin: 0;
-	}
-
- /* header */
- 	header  {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-
-	}
-
-	.logo {
-		display:none;
-	}
-
-	nav {
-		margin-right:0 ;
-	}
-
-	nav li {
-		padding-left: 5px;
-		padding-right: 5px;
-	}
-
- /* partie nos services */
-  .fas{
-        float: none;
+		padding: 0;
+    }
+/* --------------- header --------------- */
+    header {
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
     }
 
-	#services {
-
-		display: flex;
-		flex-direction: column;
-        text-align: center;
-	}
-
-	/* partie nos projets */
-
-
-	  #menu li{
+    .logo{
+        margin-left: 0;
+    }
+     
+    nav{
+        margin-right: 0;
+    }
+    
+    nav li{
         display: inline;
-        padding: 5px;
+        padding-left: 0;
+        padding-right: 15px;
     }
 
-    /* le formulaire */
+    nav a:hover{
+        border-top: none;
+        padding-top: 0;
+    }
 
-    .container {
-    	width: 100%;
-    	margin:auto;
+    nav ul{
+        margin: 0;
+        padding: 0;
+    }
+/*---------------------------- Partie services ------------------*/
+    #services {
+
+	display: flex;
+	flex-direction: column;
+    text-align: center;
+	}
+
+	.main-feature {
+		width: 100%
+		margin:auto;
+	}
+
+
+	/*------------------ Partie Portfolio ------------------------ */
+
+	#menu ul{
+    background-color: rgb(229, 229, 229);
+    padding: 5px 0px 5px 0px;
+    border-radius: 5px;
+    list-style-type: none;
+    }
+
+    #menu li{
+    display: inline;
+    padding: 5px 5px 5px 5px;
+    }
+
+    #menu li:hover{
+    background-color: rgb(78, 177, 213);
+    }
+
+    #menu li .fa.fa-caret-down{
+    display: none;
+    }
+
+    /*------------------ Partie contact ------------------*/
+
+	.container {
+   	width: 100%;
+   	margin:auto;
+
     }
 
 }
 
-@media screen and (min-width: 1024px)
-{
-	.slider {
-		display: none;
-	}
-
-	#nos_services {
-		margin-top: 200px;
-	}
-}
-
-@media screen and (min-width: 768px)
-{
-	.slider {
-		display: none;
-	}
-
-	#nos_services {
-		margin-top: 200px;
-	}
-}
